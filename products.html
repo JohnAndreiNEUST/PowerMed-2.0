@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PowerMed</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo-link">
+                <img class="header-logo" src="assets/logo.png" alt="PowerMed Logo">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a class="cta" href="contact.html"><button>Request a Demo</button></a></li>
+                </ul>
+            </nav>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a class="cta" href="contact.html"><button>Request a Demo</button></a></li>
+            </div>
+        </header>
+
+        <section id="product">
+            <div class="product-hero">
+                <div class="product-hero-content">
+                    <span>Our Technology Stack</span>
+                    <h1>Advanced Medical Solutions</h1>
+                    <p>Explore our range of ISO-compliant IoT devices and automated systems designed for modern clinical environments.</p>
+                </div>
+            </div>
+
+            <div class="product-grid-section">
+                <div class="product-filter">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="medical-robotics">Medical Robotics</button>
+                    <button class="filter-btn" data-filter="diagnostic-tools">Diagnostic Tools</button>
+                    <button class="filter-btn" data-filter="biotechnology-tools">Biotechnology Tools</button>
+                </div>
+
+                <div class="products-container">
+                    <div class="product-card" data-category="medical-robotics">
+                        <div class="product-img"><img src="assets/noImg.png" alt="MediBot"></div>
+                        <div class="product-info">
+                            <span class="category">Medical Robotics</span>
+                            <h3>MediBot-Assist S1</h3>
+                            <p>Precision robotic arm for laboratory automation and high-accuracy pharmaceutical handling.</p>
+                            <div class="product-footer"><a href="contact.html" class="inquire">Inquire<i class="fa-solid fa-chevron-right"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="medical-robotics">
+                        <div class="product-img"><img src="assets/noImg.png" alt="Surgical-Exo"></div>
+                        <div class="product-info">
+                            <span class="category">Medical Robotics</span>
+                            <h3>Exo-Glide Pro</h3>
+                            <p>Wearable surgical exoskeleton designed to reduce surgeon fatigue during long-duration procedures.</p>
+                            <div class="product-footer"><a href="contact.html" class="inquire">Inquire<i class="fa-solid fa-chevron-right"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="medical-robotics">
+                        <div class="product-img"><img src="assets/noImg.png" alt="Auto-Disinfect"></div>
+                        <div class="product-info">
+                            <span class="category">Medical Robotics</span>
+                            <h3>UVC-Rover 5</h3>
+                            <p>Autonomous mobile robot for hospital-grade room disinfection using high-intensity UVC light.</p>
+                            <div class="product-footer"><a href="contact.html" class="inquire">Inquire<i class="fa-solid fa-chevron-right"></i></a></div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="diagnostic-tools">
+                        <div class="product-img"><img src="assets/noImg.png" alt="Core-Data"></div>
+                        <div class="product-info">
+                            <span class="category">Diagnostic Tools</span>
+                            <h3>Core-Data Hub</h3>
+                            <p>A centralized system that aggregates data from multiple devices for clinical analysis.</p>
+                            <div class="product-footer"><a href="contact.html" class="inquire">Inquire<i class="fa-solid fa-chevron-right"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="diagnostic-tools">
+                        <div class="product-img"><img src="assets/noImg.png" alt="Scan-AI"></div>
+                        <div class="product-info">
+                            <span class="category">Diagnostic Tools</span>
+                            <h3>NeuroScan AI</h3>
+                            <p>Deep-learning image processor for rapid detection of neurological anomalies in MRI scans.</p>
+                            <div class="product-footer"><a href="contact.html" class="inquire">Inquire<i class="fa-solid fa-chevron-right"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="diagnostic-tools">
+                        <div class="product-img"><img src="assets/noImg.png" alt="Pathology-Engine"></div>
+                        <div class="product-info">
+                            <span class="category">Diagnostic Tools</span>
+                            <h3>PathoStream v2</h3>
+                            <p>Automated digital pathology engine for real-time tissue classification and reporting.</p>
+                            <div class="product-footer"><a href="contact.html" class="inquire">Inquire<i class="fa-solid fa-chevron-right"></i></a></div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="biotechnology-tools">
+                        <div class="product-img"><img src="assets/noImg.png" alt="Bio-Printer"></div>
+                        <div class="product-info">
+                            <span class="category">Biotechnology Tools</span>
+                            <h3>BioPrint 3D+</h3>
+                            <p>Advanced tissue scaffold printer for orthopedic and skin regeneration research.</p>
+                            <div class="product-footer"><a href="contact.html" class="inquire">Inquire<i class="fa-solid fa-chevron-right"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="biotechnology-tools">
+                        <div class="product-img"><img src="assets/noImg.png" alt="Cell-Incubator"></div>
+                        <div class="product-info">
+                            <span class="category">Biotechnology Tools</span>
+                            <h3>Stellar-Cell Incubator</h3>
+                            <p>Climate-controlled bioreactor for the expansion of therapeutic stem cell cultures.</p>
+                            <div class="product-footer"><a href="contact.html" class="inquire">Inquire<i class="fa-solid fa-chevron-right"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="biotechnology-tools">
+                        <div class="product-img"><img src="assets/noImg.png" alt="Gene-Synth"></div>
+                        <div class="product-info">
+                            <span class="category">Biotechnology Tools</span>
+                            <h3>Helix-Synth X</h3>
+                            <p>Desktop gene synthesis platform for rapid personalized medicine development.</p>
+                            <div class="product-footer"><a href="contact.html" class="inquire">Inquire<i class="fa-solid fa-chevron-right"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-banner">
+            <div class="cta-content">
+                <h2>Need a custom IT solution for your facility?</h2
+                <p>Our technical team can customize any of our existing products or build entirely new IT-integrated hardware to meet your specific clinical needs.</p>
+                <div class="cta-button-container">
+                    <a href="contact.html" class="cta-btn">Contact our Team</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-col">
+                    <img class="footer-logo" src="assets/logo.png" alt="PowerMed Logo">
+                    <p>
+                        Advancing the boundaries of medical technology to create a smarter, safer healthcare future
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="solutions.html">Solutions</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <div class="contact-us">
+                        <p><i class="fa-solid fa-location-dot"></i>Unit 704, Prestige Tower, Ortigas Center, Pasig City</p>
+                        <p><i class="fa-solid fa-phone"></i>+63 917 315 9858</p>
+                        <p><i class="fa-solid fa-envelope"></i>sales@powermed.com.ph</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 PowerMed Philippines. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle-btn')
+            const toggleBtnIcon = document.querySelector('.toggle-btn i')
+            const dropDownMenu = document.querySelector('.dropdown-menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+            }
+
+            const header = document.querySelector("header");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    productCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        
+                        if (filterValue === 'all' || category === filterValue) {
+                            card.classList.remove('hide');
+                        } else {
+                            card.classList.add('hide');
+                        }
+                    });
+                });
+            });
+        });
+        </script>
+    </body>
+</html>
