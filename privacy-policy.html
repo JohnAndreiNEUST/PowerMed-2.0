@@ -21,7 +21,7 @@
                     <li><a href="products.html">Products</a></li>
                     <li><a href="solutions.html">Solutions</a></li>
                     <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a class="cta" href="contact.html"><button>Request a Demo</button></a></li>
                 </ul>
             </nav>
@@ -33,15 +33,67 @@
                 <li><a href="products.html">Products</a></li>
                 <li><a href="solutions.html">Solutions</a></li>
                 <li><a href="case-studies.html">Case Studiest</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a class="cta" href="contact.html"><button>Request a Demo</button></a></li>
             </div>
         </header>
 
-                <footer>
+        <section id="privacy-policy-hero">
+            <div class="privacy-policy-hero-content">
+                <span><i class="fa-solid fa-shield-halved"></i></span>
+                <h1>Privacy <a>Policy</a></h1>
+                <p>Last Updated: March 30, 2026</p>
+            </div>
+        </section>
+
+<section id="privacy-policy-content">
+            <div class="privacy-policy-container">
+                <aside class="privacy-policy-sidebar">
+                    <h4>Contents</h4>
+                    <ul>
+                        <li><a href="#collection">1. Data Collection</a></li>
+                        <li><a href="#usage">2. Data Usage</a></li>
+                        <li><a href="#security">3. Data Security</a></li>
+                        <li><a href="#disclosure">4. Disclosure</a></li>
+                        <li><a href="#rights">5. User Rights</a></li>
+                    </ul>
+                </aside>
+
+                <div class="privacy-policy-text">
+                    <div id="collection" class="privacy-policy-section">
+                        <h3>1. Data Collection & Sources</h3>
+                        <p>PowerMed collects information necessary to maintain 24/7 robotic operations and secure portal access. This includes personal identifiers such as your name, professional email address, and mobile number provided during demo requests. Additionally, our IoT nodes and autonomous fleets collect technical telemetry—including system health logs, sensor data, and navigation metrics—to ensure operational safety and performance efficiency within your facility.</p>
+                    </div>
+
+                    <div id="usage" class="privacy-policy-section">
+                        <h3>2. Purpose of Data Usage</h3>
+                        <p>The information we collect is used strictly to provide, maintain, and improve our medical automation services. This includes troubleshooting hardware malfunctions, delivering software updates to robotic units, and fine-tuning our computer vision engines. We may also use your contact information to provide critical security alerts or technical support updates regarding your specific IoT infrastructure.</p>
+                    </div>
+
+                    <div id="security" class="privacy-policy-section">
+                        <h3>3. Data Security & Protocols</h3>
+                        <p>We implement enterprise-grade security measures to protect clinical data and system integrity. All data is encrypted at rest and in transit using AES-256 protocols. In compliance with the Data Privacy Act of 2012 (Republic Act No. 10173) of the Philippines, we ensure that patient-related metadata is anonymized and stored within secure, localized cloud environments with restricted access granted only to authorized technical engineering personnel via multi-factor authentication.</p>
+                    </div>
+
+                    <div id="disclosure" class="privacy-policy-section">
+                        <h3>4. Third-Party Disclosure</h3>
+                        <p>PowerMed does not sell, lease, or trade your personal or facility data to third parties. Disclosure only occurs when necessary to fulfill service requirements (such as cloud hosting providers or SMS gateway services) under strict confidentiality agreements, or when required by law to comply with legal processes or protect the safety of healthcare clinical environments.</p>
+                    </div>
+                    
+                    <div id="rights" class="privacy-policy-section">
+                        <h3>5. Your Rights & Control</h3>
+                        <p>As a user of PowerMed services, you have the right to access, correct, or request the deletion of your personal data stored within our systems. You may also object to certain data processing activities or request a copy of your technical logs. For any privacy-related requests or to contact our Data Protection Officer, please reach out to <strong>privacy@powermed.com.ph</strong> or visit our office at Prestige Tower, Pasig City.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
             <div class="footer-container">
                 <div class="footer-col">
-                    <img class="footer-logo" src="assets/logo.png" alt="PowerMed Logo">
+                    <a href="index.html">
+                        <img class="footer-logo" src="assets/logo.png" alt="PowerMed Logo">
+                    </a>
                     <p>
                         Advancing the boundaries of medical technology to create a smarter, safer healthcare future
                     </p>
@@ -58,14 +110,14 @@
                         <li><a href="products.html">Products</a></li>
                         <li><a href="solutions.html">Solutions</a></li>
                         <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="case-studies.html">Case Studies</a></li>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         <li><a href="terms-of-service.html">Terms of Service</a></li>
@@ -109,6 +161,35 @@
                 } else {
                     header.classList.remove("scrolled");
                 }
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '-150px 0px -70% 0px',
+                    threshold: 0
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.getAttribute('id');
+                            
+                            document.querySelectorAll('.privacy-policy-sidebar a').forEach(link => {
+                                link.classList.remove('active');
+                            });
+
+                            const activeLink = document.querySelector(`.privacy-policy-sidebar a[href="#${id}"]`);
+                            if (activeLink) {
+                                activeLink.classList.add('active');
+                            }
+                        }
+                    });
+                }, observerOptions);
+
+                document.querySelectorAll('.privacy-policy-section').forEach(section => {
+                    observer.observe(section);
+                });
             });
         </script>
     </body>
