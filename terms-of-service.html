@@ -21,7 +21,7 @@
                     <li><a href="products.html">Products</a></li>
                     <li><a href="solutions.html">Solutions</a></li>
                     <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a class="cta" href="contact.html"><button>Request a Demo</button></a></li>
                 </ul>
             </nav>
@@ -33,15 +33,67 @@
                 <li><a href="products.html">Products</a></li>
                 <li><a href="solutions.html">Solutions</a></li>
                 <li><a href="case-studies.html">Case Studiest</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a class="cta" href="contact.html"><button>Request a Demo</button></a></li>
             </div>
         </header>
 
-                <footer>
+        <section id="terms-of-service-hero">
+            <div class="terms-of-service-hero-content">
+                <span><i class="fa-solid fa-file-medical"></i></span>
+                <h1>Terms of <a>Service</a></h1>
+                <p>Last Updated: March 30, 2026</p>
+            </div>
+        </section>
+
+        <section id="terms-of-service-content">
+            <div class="terms-of-service-container">
+                <aside class="terms-of-service-sidebar">
+                    <h4>Contents</h4>
+                    <ul>
+                        <li><a href="#acceptance">1. Acceptance</a></li>
+                        <li><a href="#services">2. Services</a></li>
+                        <li><a href="#compliance">3. Compliance</a></li>
+                        <li><a href="#liability">4. Liability</a></li>
+                        <li><a href="#contact">5. Contact</a></li>
+                    </ul>
+                </aside>
+
+                <div class="terms-of-service-text">
+                    <div id="acceptance" class="terms-of-service-section">
+                        <h3>1. Acceptance of Terms</h3>
+                        <p>By accessing the PowerMed platform, IoT nodes, or robotic interfaces, you agree to be bound by these technical and operational terms. These terms constitute a legally binding agreement between you and PowerMed. If you are representing a medical facility, laboratory, or healthcare entity, you confirm you have the legal authority to bind said entity to these protocols and security standards. Continued use of our infrastructure implies an ongoing acceptance of any modified terms updated within our Technical Portal.</p>
+                    </div>
+
+                    <div id="services" class="terms-of-service-section">
+                        <h3>2. Service Provision & Uptime</h3>
+                        <p>PowerMed provides intelligent infrastructure, automated systems, and real-time data analytics. While we strive for a 99.9% operational uptime, maintenance of hardware and critical neural-link updates may result in scheduled downtime. We provide 48-hour notice for planned maintenance via the Technical Support Portal. PowerMed reserves the right to suspend access to IoT nodes if telemetry data indicates a breach of safety protocols or unauthorized hardware tampering that could jeopardize clinical safety.</p>
+                    </div>
+
+                    <div id="compliance" class="terms-of-service-section">
+                        <h3>3. Regulatory Compliance & Data Privacy</h3>
+                        <p>Our systems are engineered to assist healthcare professionals by augmenting data visibility; however, they do not replace clinical judgment or professional medical advice. All data processing within our AI Diagnostic Core complies with local health data privacy standards, specifically the Data Privacy Act of 2012 (Republic Act No. 10173) in the Philippines. Users are responsible for ensuring that their staff's interaction with the Sentinel Fleet and BioStream systems follows internal hospital compliance and patient confidentiality guidelines.</p>
+                    </div>
+
+                    <div id="liability" class="terms-of-service-section">
+                        <h3>4. Limitation of Liability</h3>
+                        <p>To the maximum extent permitted by law, PowerMed is not liable for outcomes resulting from the unauthorized modification of robotic hardware, the bypassing of safety sensors by facility staff, or the use of our diagnostic engines outside of their intended laboratory environment. We are not responsible for data loss occurring due to client-side network failures or unauthorized third-party integrations that have not been vetted by our technical engineering team.</p>
+                    </div>
+                    
+                    <div id="contact" class="terms-of-service-section">
+                        <h3>5. Contact Information</h3>
+                        <p>For legal inquiries, formal notices, or questions regarding these terms, please contact our Legal Affairs department at <strong>support@powermed.com.ph</strong>. You may also visit our corporate headquarters at Unit 704, Prestige Tower, Emerald Avenue, Ortigas Center, Pasig City, 1605 Metro Manila. Our office hours for legal consultations are Monday through Friday, 9:00 AM to 5:00 PM PHT.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
             <div class="footer-container">
                 <div class="footer-col">
-                    <img class="footer-logo" src="assets/logo.png" alt="PowerMed Logo">
+                    <a href="index.html">
+                        <img class="footer-logo" src="assets/logo.png" alt="PowerMed Logo">
+                    </a>
                     <p>
                         Advancing the boundaries of medical technology to create a smarter, safer healthcare future
                     </p>
@@ -58,14 +110,14 @@
                         <li><a href="products.html">Products</a></li>
                         <li><a href="solutions.html">Solutions</a></li>
                         <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="case-studies.html">Case Studies</a></li>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         <li><a href="terms-of-service.html">Terms of Service</a></li>
@@ -109,6 +161,35 @@
                 } else {
                     header.classList.remove("scrolled");
                 }
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '-150px 0px -70% 0px',
+                    threshold: 0
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.getAttribute('id');
+                            
+                            document.querySelectorAll('.terms-of-service-sidebar a').forEach(link => {
+                                link.classList.remove('active');
+                            });
+
+                            const activeLink = document.querySelector(`.terms-of-service-sidebar a[href="#${id}"]`);
+                            if (activeLink) {
+                                activeLink.classList.add('active');
+                            }
+                        }
+                    });
+                }, observerOptions);
+
+                document.querySelectorAll('.terms-of-service-section').forEach(section => {
+                    observer.observe(section);
+                });
             });
         </script>
     </body>
